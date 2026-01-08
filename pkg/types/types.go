@@ -167,3 +167,26 @@ type ApiError struct {
 		Message string `json:"message"`
 	} `json:"error"`
 }
+
+// Ingredient category (from /api/v1/ingredient-categories)
+type IngredientCategory struct {
+	Name  string `json:"name"`
+	Count int    `json:"count"`
+}
+
+type IngredientCategoriesResponse struct {
+	Data []IngredientCategory `json:"data"`
+}
+
+// Ingredient (from /api/v1/ingredients)
+type Ingredient struct {
+	ID       string `json:"id"`
+	Name     string `json:"name"`
+	Category string `json:"category"`
+	Source   string `json:"source"`
+}
+
+type IngredientsResponse struct {
+	Data []Ingredient `json:"data"`
+	Meta ListMeta     `json:"meta"`
+}

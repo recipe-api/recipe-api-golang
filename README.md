@@ -55,6 +55,17 @@ Run the example scripts to explore the API:
     go run scripts/06-recipe.go --id=<recipe_id>
     ```
 
+*   **List ingredient categories:**
+    ```bash
+    go run scripts/07-ingredient-categories.go
+    ```
+
+*   **Search ingredients:**
+    ```bash
+    go run scripts/08-ingredients.go --q="chicken"
+    go run scripts/08-ingredients.go --category="Vegetables"
+    ```
+
 ## Project Structure
 
 *   `pkg/client/client.go`: API client configuration and request handling
